@@ -1,0 +1,315 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    cursor: default;
+	font-family: 'Roboto',sans-serif;
+}
+#check{
+    display: none;
+}
+#btn{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 6px black;
+    z-index: 2;
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0);
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ label #btn{
+    width: 300px;
+    color: #201c1500;
+    text-shadow: none;
+    box-shadow: none;
+}
+#check:checked ~ .sidebar .user{
+    left: 0;
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ .sidebar ul li{
+    margin-left: 20px;
+}
+label #cancel{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	z-index: 3;
+	position: fixed;
+}
+#check:checked ~ label #cancel{
+	left: 0;
+	display: block;
+}
+.sidebar{
+	z-index: 4;
+	position: fixed;
+	width: 300px;
+    left: -300px;
+	height: 100%;
+	background: #fff;
+	transition: .2s ease-in;
+}
+.sidebar img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+.sidebar ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sidebar ul li a{
+	font-size: 15px;
+    color: #201c15;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 210, 210);
+    transition: .2s;
+    padding: 10px 20px;
+    display: flex;
+}
+.sidebar-bg{
+    background: url(https://img.freepik.com/free-photo/jasmine-rice_74190-7259.jpg?w=1380&t=st=1668355327~exp=1668355927~hmac=c962656fe6fa0c512a165908e1aee5cdd3c25eca21c37c4ecdad10b9975b6a5d);
+    background-size: cover;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 0;
+    left: 0;
+}
+.sidebar-bgs{
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.481);
+}
+.sidebar #b1{
+    transition: all 800ms ease .1s;
+}
+.sidebar #b2{
+    transition: all 800ms ease .4s;
+}
+.sidebar #b3{
+    transition: all 800ms ease .7s;
+}
+.sidebar a:hover{
+    background: rgb(238, 234, 226);
+	margin-left: 5px;
+}
+.user{
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.user .nama{
+    font-size: 20px;
+	margin-top: 15px;
+	font-weight: bold;
+}
+.user i{
+    padding: 10px 0px;
+    font-size: 50px;
+}
+.user .id{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.header{
+    background: rgba(255, 255, 255, 0.911);
+    color: #000;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    transition: 0.6s;
+    padding: 30px 100px;
+}
+.header.bar{
+    padding: 15px 100px;
+    background: rgba(0, 0, 0, 0.911);
+    color: white;
+    position: fixed;
+}
+.header.bar h2,
+.header.bar ul li a{
+    color: rgb(194, 194, 194);
+    transition: 0s;
+}
+.header.bar h2,
+.header.bar ul li a:hover{
+    color: #fff;
+}
+.header h2{
+    font-family: 'Maiandra GD';
+    position: relative;
+    text-decoration: none;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+.header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header ul li{
+    position: relative;
+    list-style: none;
+}
+.header ul li a{
+    padding: 20px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    transition: 0s;
+}
+.header ul li a:hover{
+    color: rgb(174, 174, 174);
+}
+
+/* ======================================= */
+.s1{
+    background: rgba(0, 0, 0, 0);
+    align-items: center;
+    display: grid;
+    height: 400px;
+    transition: ease 2s;
+}
+.dp1{
+    display: block;
+    color: #fff;
+}
+.dp1 header{
+    font-family: 'Maiandra GD';
+    letter-spacing: -1px;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-left: 20px;
+    line-height: 2;
+}
+.dp1 p{
+    text-align: justify;
+    font-size: 25px;
+    font-family: Arial;
+}
+.dp1 a{
+    font-family: 'FZShuTi';
+    float: right;
+    margin-top: 30px;
+    padding: 10px 15px 10px 8px;
+    width: max-content;
+    border: #f5f4f6 1px solid;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+.dp1 a:hover{
+    background-color: rgba(255, 255, 255, 0.163);
+}
+.btn-btn-primary{
+    background: #0d6efd;
+    color: #000;
+    padding: 10px;
+    margin-inline: 10%;
+    width: 80%;
+    text-align: center;
+}
+.table-table-primary{
+    background: #cfe2ff;
+    color: #000;
+    padding: 10px;
+    margin-inline: 10%;
+    width: 80%;
+}
+table th{
+    text-align: left;
+}
+.footer{
+    margin-top: 10%;
+    border-top: black 1px solid;
+    text-align: center;
+}
+.footer-address{
+    color: rgb(207, 207, 207);
+}
+.footer-address a{
+    color: white;
+    transition: ease-out .1s;
+}
+.footer-address a:hover{
+    color: black;
+}
+.logo-icon{
+    z-index: 1;
+    margin-top: 30px;
+}
+.logo-icon i{
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: rgb(43, 43, 43);
+    box-shadow: 2px 2px 4px black;
+}
+.logo-ig i{
+    color: rgb(190, 190, 190);
+    font-size: 30px; 
+    margin-right: 20px;
+}
+.logo-yt i{
+    color: rgb(190, 190, 190);
+    font-size: 20px;
+}
+.info{
+    position: absolute;
+    background: rgba(67, 67, 68, 0.782);
+    width: 100%;
+    height: 500px;
+}
+.wall{
+    background: url(https://img.freepik.com/free-photo/piece-golden-rice-rice-waiting-be-harvested_1205-11336.jpg?w=1380&t=st=1668351517~exp=1668352117~hmac=f0eef016bfc4224e1e08bf9a93136e08c95c04895b0f7eb7cdd98ad191c1ffaf);
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.walls{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.619);
+}
+.atas{
+    position: relative;
+    z-index: 1001;
+}
